@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_formation" >
+        <item>DAR</item>
+        <item>ASR</item>
+        <item>RT</item>
+        <item>INGC</item>
+        <item>LIPMEN</item>
+    </string-array>
+
+    <string-array name="tab_details" >
+        <item>Java, Php, Python, Dev Mobile, UML, Oracle, Java EE, Linux, JavaScript, Angular, Methodes agiles. Dev frontend, Dev backend, Administrateur DB</item>
+        <item>Linux, CCNA Securite, Admin Systemes, Admin Reseaux, C++, Windows Server. Admin Systemes, Admin reseaux.</item>
+        <item>RT</item>
+        <item>INGC</item>
+        <item>LIPMEN</item>
+    </string-array>
+</resources>
