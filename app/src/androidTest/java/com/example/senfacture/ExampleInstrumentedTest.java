@@ -1,4 +1,4 @@
-package com.example.senfacture2;
+package com.example.senfacture;
 
 import android.content.Context;
 

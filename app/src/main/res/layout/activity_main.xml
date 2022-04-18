@@ -1,18 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/all"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:textStyle="italic"
+        android:textSize="@dimen/title"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="@string/connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="381dp"
+        android:layout_height="162dp"
+        app:srcCompat="@mipmap/ic_logo_round">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/txtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top"
+        android:hint="@string/login" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/txtPassword"
+        android:layout_marginTop="@dimen/top"
+        android:hint="@string/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:backgroundTint="@color/blue_dark"
+        android:layout_marginRight="@dimen/right"
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginTop="@dimen/top"
+        android:text="@string/connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="180dp"
+        android:text="@string/not_signed_up"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginTop="@dimen/top"
+        android:layout_marginRight="@dimen/right"
+        android:backgroundTint="@color/blue_sky"
+        android:text="@string/sign_up" />
+
+
+
+</LinearLayout>

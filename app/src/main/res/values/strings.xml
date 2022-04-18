@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">SenFacture</string>
-    <string name="connection">Connexion</string>
+    <string name="connection">Connectez-vous</string>
     <string name="login">Identifiant</string>
     <string name="password">Mot de passe</string>
     <string name="connect">Se connecter</string>
     <string name="sign_up">s\'inscrire</string>
+    <string name="not_signed_up">Vous n\'avez pas de compte ?</string>
     <string name="email">senfacture@overload.sn</string>
     <string name="payed_bills">Factures payées</string>
     <string name="unpayed_bills">Factures impayées</string>
@@ -35,7 +36,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_main2">MainActivity2</string>
-    <string name="senfacture">SenFacture est un système de gestion de factures. Il vous permettra d\'enregistrer, de modifier et de consulter les dites factures, qu'elles soient impayées ou non</string>
+    <string name="senfacture">SenFacture est un système de gestion de factures. Il vous permettra d\'enregistrer, de modifier et de consulter les dites factures, qu\'elles soient impayées ou non</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_university_fragment">UniversityFragment</string>
 </resources>

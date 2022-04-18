@@ -1,4 +1,4 @@
-package com.example.senfacture2;
+package com.example.senfacture;
 
 import androidx.appcompat.app.AppCompatActivity;
 
