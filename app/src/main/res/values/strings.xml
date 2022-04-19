@@ -3,8 +3,8 @@
     <string name="connection">Connectez-vous</string>
     <string name="login">Identifiant</string>
     <string name="password">Mot de passe</string>
-    <string name="connect">Se connecter</string>
-    <string name="sign_up">s\'inscrire</string>
+    <string name="connect">Connexion</string>
+    <string name="sign_up">Inscription</string>
     <string name="not_signed_up">Vous n\'avez pas de compte ?</string>
     <string name="email">senfacture@overload.sn</string>
     <string name="payed_bills">Factures payées</string>

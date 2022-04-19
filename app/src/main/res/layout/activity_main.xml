@@ -10,18 +10,18 @@
 
 
     <TextView
-        android:textStyle="italic"
-        android:textSize="@dimen/title"
-        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/connection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textColor="@color/gray"
+        android:textSize="@dimen/title"
+        android:textStyle="bold|italic" />
 
     <ImageView
         android:layout_width="381dp"
-        android:layout_height="162dp"
-        app:srcCompat="@mipmap/ic_logo_round">
+        android:layout_height="118dp"
+        app:srcCompat="@mipmap/ic_logo3">
 
     </ImageView>
 
@@ -43,13 +43,13 @@
 
     <Button
         android:id="@+id/btnConnect"
-        android:backgroundTint="@color/blue_dark"
-        android:layout_marginRight="@dimen/right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/left"
         android:layout_marginTop="@dimen/top"
-        android:text="@string/connect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_marginRight="@dimen/right"
+        android:backgroundTint="@color/green"
+        android:text="@string/connect" />
 
     <TextView
         android:layout_width="match_parent"
@@ -68,8 +68,9 @@
         android:layout_marginLeft="@dimen/left"
         android:layout_marginTop="@dimen/top"
         android:layout_marginRight="@dimen/right"
-        android:backgroundTint="@color/blue_sky"
-        android:text="@string/sign_up" />
+        android:backgroundTint="@color/light_green"
+        android:text="@string/sign_up"
+        android:textColor="@color/black" />
 
 
 
