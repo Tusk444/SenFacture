@@ -7,9 +7,10 @@
     <string name="sign_up">s\'inscrire</string>
     <string name="not_signed_up">Vous n\'avez pas de compte ?</string>
     <string name="email">senfacture@overload.sn</string>
-    <string name="payed_bills">Factures payées</string>
-    <string name="unpayed_bills">Factures impayées</string>
+    <string name="paid_bills">Factures payées</string>
+    <string name="unpaid_bills">Factures impayées</string>
     <string name="manage_bills">Gérer les factures</string>
+    <string name="structures">Structures des facturiers</string>
     <string name="help">Aide</string>
     <string name="inscription">Inscription</string>
     <string name="first_name">Prénom</string>

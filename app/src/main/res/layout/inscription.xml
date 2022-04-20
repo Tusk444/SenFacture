@@ -43,15 +43,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
-        android:hint="@string/email" />
+        android:hint="&quot;" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:layout_marginTop="@dimen/top" />
 
     <Button
         android:id="@+id/btnSave"
