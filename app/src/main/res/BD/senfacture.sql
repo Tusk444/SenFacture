@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 21 avr. 2022 à 00:30
+-- Généré le : jeu. 21 avr. 2022 à 18:36
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -47,7 +47,7 @@ CREATE TABLE `user` (
   `id` int(50) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
-  `login` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
