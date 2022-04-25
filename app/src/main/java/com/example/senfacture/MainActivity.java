@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,18 +22,18 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText txtLogin, txtPassword;
+    private EditText txtEmail, txtPassword;
     private Button btnConnect, btnSignUp;
     private String password;
-    public static String login;
+    public static String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Liaiso entre variables et composants
-        txtLogin = findViewById(R.id.txtLogin);
+        //Liaison entre variables et composants
+        txtEmail = findViewById(R.id.txtEmail);
         txtPassword = findViewById(R.id.txtPassword);
         btnConnect = findViewById(R.id.btnConnect);
         btnSignUp = findViewById(R.id.btnSignUp);
@@ -40,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login = txtLogin.getText().toString().trim();
+                email = txtEmail.getText().toString().trim();
                 password = txtPassword.getText().toString().trim();
 
-                if(login.isEmpty() || password.isEmpty()){
+                if(email.isEmpty() || password.isEmpty()){
                     String message = getString(R.string.error_field);
-                    //Message d'alert
+                    //Message d'alerte
                     Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
                 }else{
                     authentification();
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void authentification(){
-        String url = "http://192.168.1.12/esmt/connexion.php?login="+login+"&password="+password;
+        String url = "http://192.168.1.5/senfacture/connexion.php?email="+email+"&password="+password;
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder().url(url).build();
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else{
                         Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                        intent.putExtra("LOGIN", login);
+                        intent.putExtra("EMAIL", email);
                         startActivity(intent);
                     }
                 }catch (Exception e){
