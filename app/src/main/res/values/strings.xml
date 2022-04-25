@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">SenFacture</string>
+    <string name="welcome">Bienvenue</string>
     <string name="connection">Connectez-vous</string>
     <string name="login">Email</string>
     <string name="password">Mot de passe</string>
     <string name="connect">Connexion</string>
     <string name="sign_up">Inscription</string>
+    <string name="sign_up2">S\'inscrire</string>
     <string name="not_signed_up">Vous n\'avez pas de compte ?</string>
     <string name="email">senfacture@overload.sn</string>
     <string name="paid_bills">Factures payées</string>

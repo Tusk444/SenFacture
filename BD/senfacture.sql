@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `facture` (
-  `id_facture` int(50) NOT NULL,
+  `id_facture` int(10) NOT NULL,
   `intitulé` varchar(50) NOT NULL,
-  `entreprise` varchar(50) NOT NULL,
+  `entreprise` varchar(20) NOT NULL,
   `montant` int(50) NOT NULL,
   `numero` int(50) NOT NULL,
   `date_echeance` varchar(50) NOT NULL,
@@ -45,11 +45,11 @@ CREATE TABLE `facture` (
 --
 
 CREATE TABLE `user` (
-  `id` int(50) NOT NULL,
-  `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `id` int(10) NOT NULL,
+  `nom` varchar(30) NOT NULL,
+  `prenom` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

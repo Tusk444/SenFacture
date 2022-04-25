@@ -25,28 +25,28 @@
     </ImageView>
 
     <EditText
-        android:id="@+id/txtLastName"
+        android:id="@+id/txtFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
         android:hint="@string/last_name" />
 
     <EditText
-        android:id="@+id/txtMontant"
+        android:id="@+id/txtLastName"
         android:layout_marginTop="@dimen/top"
         android:hint="@string/first_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/txtNuméro"
+        android:id="@+id/txtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
-        android:hint="&quot;" />
+        android:hint="@string/login" />
 
     <EditText
-        android:id="@+id/txtDate"
+        android:id="@+id/txtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
@@ -61,6 +61,6 @@
         android:layout_marginTop="@dimen/top"
         android:layout_marginRight="@dimen/right"
         android:backgroundTint="@color/green"
-        android:text="@string/save" />
+        android:text="@string/sign_up2" />
 
 </LinearLayout>
