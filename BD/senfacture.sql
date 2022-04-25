@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 21 avr. 2022 à 18:36
+-- Généré le : dim. 24 avr. 2022 à 15:57
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `facture` (
   `id_facture` int(50) NOT NULL,
   `intitulé` varchar(50) NOT NULL,
+  `entreprise` varchar(50) NOT NULL,
   `montant` int(50) NOT NULL,
   `numero` int(50) NOT NULL,
   `date_echeance` varchar(50) NOT NULL,
