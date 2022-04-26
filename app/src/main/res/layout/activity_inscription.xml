@@ -51,10 +51,10 @@
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:inputType="textPassword"
-        tools:layout_marginTop="@dimen/top" />
+        android:layout_marginTop="@dimen/top" />
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/left"
@@ -62,5 +62,16 @@
         android:layout_marginRight="@dimen/right"
         android:backgroundTint="@color/green"
         android:text="@string/sign_up2" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginTop="@dimen/top"
+        android:layout_marginRight="@dimen/right"
+        android:backgroundTint="@color/light_green"
+        android:text="Retour"
+        android:textColor="@color/black" />
 
 </LinearLayout>

@@ -45,17 +45,17 @@ public class StructureFragment extends Fragment implements OnMapReadyCallback {
         mMap = googleMap;
 
         LatLng orange = new LatLng(14.666937049443456, -17.437621123668485);
-        mMap.addMarker(new MarkerOptions().position(orange).title("Orange Sonatel").snippet("Contact: 338392100 Site: http://www.orange.sn/"));
+        mMap.addMarker(new MarkerOptions().position(orange).title("Orange Sonatel").snippet("Contact: 338392100 | Site Web: http://www.orange.sn/"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(orange, 14));
 
         LatLng senelec = new LatLng(14.71281993627529, -17.455441339010857);
-        mMap.addMarker(new MarkerOptions().position(senelec).title("Senelec").snippet("Contact: 338399476 Site: http://www.senelec.sn/"));
+        mMap.addMarker(new MarkerOptions().position(senelec).title("Senelec").snippet("Contact: 338399476 | Site Web: http://www.senelec.sn/"));
 
         LatLng seneau = new LatLng(14.720336475649072, -17.433933501944242);
-        mMap.addMarker(new MarkerOptions().position(seneau).title("SDE").snippet("Contact: 338393737 Site: http://www.sde.sn/"));
+        mMap.addMarker(new MarkerOptions().position(seneau).title("SDE").snippet("Contact: 338393737 | Site Web: http://www.sde.sn/"));
 
         LatLng canalplus = new LatLng(14.66975425530867, -17.429331174839028);
-        mMap.addMarker(new MarkerOptions().position(canalplus).title("Canal +").snippet("Contact: 338895040 Site: https://www.canalplus-afrique.com/sn/"));
+        mMap.addMarker(new MarkerOptions().position(canalplus).title("Canal +").snippet("Contact: 338895040 | Site Web: https://www.canalplus-afrique.com/sn/"));
 
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
