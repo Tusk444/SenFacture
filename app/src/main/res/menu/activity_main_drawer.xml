@@ -12,10 +12,6 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_manage"
             android:title="@string/manage_bills" />
-        <item
-            android:id="@+id/nav_services"
-            android:icon="@drawable/ic_map"
-            android:title="@string/structures" />
 
         <item
             android:id="@+id/nav_unpaid"
@@ -26,6 +22,11 @@
             android:id="@+id/nav_paid"
             android:icon="@drawable/ic_money"
             android:title="@string/paid_bills" />
+
+        <item
+            android:id="@+id/nav_services"
+            android:icon="@drawable/ic_map"
+            android:title="@string/structures" />
 
         <item
             android:id="@+id/nav_help"

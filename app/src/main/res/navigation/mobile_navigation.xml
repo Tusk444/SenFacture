@@ -11,28 +11,36 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-   <!-- <fragment
-        android:id="@+id/nav_formation"
-        android:name="com.example.myschool.FormationFragment"
-        android:label="@string/formation"
-        tools:layout="@layout/fragment_formation" />
+   <fragment
+          android:id="@+id/nav_manage"
+          android:name="com.example.senfacture.GestionFragment"
+          android:label="@string/manage_bills"
+          tools:layout="@layout/fragment_gestion" />
+
+      <fragment
+          android:id="@+id/nav_paid"
+          android:name="com.example.senfacture.PayeesFragment"
+          android:label="@string/paid_bills"
+          tools:layout="@layout/fragment_payees" />
+
+      <fragment
+          android:id="@+id/nav_unpaid"
+          android:name="com.example.senfacture.ImpayeesFragment"
+          android:label="@string/unpaid_bills"
+          tools:layout="@layout/fragment_impayees" />
+
 
     <fragment
-        android:id="@+id/nav_events"
-        android:name="com.example.myschool.EventsFragment"
-        android:label="@string/events"
-        tools:layout="@layout/fragment_events" />
+        android:id="@+id/nav_services"
+        android:name="com.example.senfacture.StructureFragment"
+        android:label="@string/structures"
+        tools:layout="@layout/fragment_structures" />
 
     <fragment
-        android:id="@+id/nav_university"
-        android:name="com.example.myschool.UniversityFragment"
-        android:label="@string/university"
-        tools:layout="@layout/fragment_university" />
+        android:id="@+id/nav_help"
+        android:name="com.example.senfacture.HelpFragment"
+        android:label="@string/help"
+        tools:layout="@layout/fragment_help" />
 
-    <fragment
-        android:id="@+id/nav_mark"
-        android:name="com.example.myschool.MarkFragment"
-        android:label="@string/marks"
-        tools:layout="@layout/fragment_mark" />
     !-->
 </navigation>

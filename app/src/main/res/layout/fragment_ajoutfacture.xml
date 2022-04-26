@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="entreprise" />
 
-    <RadioButton
+   <!-- <RadioButton
         android:id="@+id/txtEntreprise"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
         android:id="@+id/txtEntreprise"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
-        android:text="rapido" />
+        android:text="canal +" />!-->
 
     <Button
         android:id="@+id/btnSave"
