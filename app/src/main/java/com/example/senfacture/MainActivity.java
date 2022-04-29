@@ -25,8 +25,8 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText txtEmail, txtPassword;
-    private Button btnConnect, btnSignUp;
+    private EditText txtEmail, txtPassword,txtIntitulé,txtMontant,txtNuméro,txtDate;
+    private Button btnConnect, btnSignUp,btnSave;
     private String password;
     public static String email;
     // variable for shared preferences.
@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPassword);
         btnConnect = findViewById(R.id.btnConnect);
         btnSignUp = findViewById(R.id.btnSignUp);
+        btnSave = findViewById(R.id.btnSave);
+        txtIntitulé = findViewById(R.id.txtIntitulé);
+        txtMontant = findViewById(R.id.txtMontant);
+        txtNuméro = findViewById(R.id.txtNuméro);
+        txtDate = findViewById(R.id.txtDate);
 
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 
@@ -145,5 +150,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    private boolean CheckAllFields() {
+        if (txtIntitulé.length() == 0) {
+            txtIntitulé.setError("This field is required");
+            return false;
+        }
+
+        if (txtMontant.length() == 0) {
+            txtMontant.setError("This field is required");
+            return false;
+        }
+
+        if (txtNuméro.length() == 0) {
+            txtNuméro.setError("This field is required");
+            return false;
+        }
+
+        if (txtDate.length() == 0) {
+            txtDate.setError("This field is required");
+            return false;
+        }
+        // after all validation return true.
+        return true;
     }
 }

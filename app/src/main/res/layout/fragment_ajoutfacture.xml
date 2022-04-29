@@ -25,7 +25,7 @@
     </ImageView>
 
     <EditText
-        android:id="@+id/txtLastName"
+        android:id="@+id/txtIntitulé"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
@@ -53,13 +53,7 @@
         android:inputType="date"
         tools:layout_marginTop="@dimen/top" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="entreprise" />
-
-   <!-- <RadioButton
+    <!-- <RadioButton
         android:id="@+id/txtEntreprise"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
