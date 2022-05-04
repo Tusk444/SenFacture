@@ -68,7 +68,7 @@ public class InscriptionActivity extends AppCompatActivity {
     }
 
     public void inscription(){
-        String url = "http://192.168.1.5/senfacture/inscription.php?first_name="+firstName+"&last_name="+lastName+"&email="+email+"&password="+password;
+        String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/inscription.php?first_name="+firstName+"&last_name="+lastName+"&email="+email+"&password="+password;
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder().url(url).build();

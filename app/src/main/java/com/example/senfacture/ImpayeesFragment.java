@@ -64,7 +64,7 @@ public class ImpayeesFragment extends Fragment {
     }
 
     public void getIdByEmail(){
-        String url = "http://192.168.1.5/senfacture/id.php?email="+email;
+        String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/id.php?email="+email;
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder().url(url).build();
@@ -103,7 +103,7 @@ public class ImpayeesFragment extends Fragment {
 
     public void getBills(){
         getIdByEmail();
-        String url = "http://192.168.1.5/senfacture/bills.php?id="+id;
+        String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/bills.php?id="+id;
         bills = "";
 
         OkHttpClient client = new OkHttpClient();
