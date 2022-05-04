@@ -4,10 +4,10 @@
  
  $first_name=$_GET['first_name'];
  $last_name=$_GET['last_name'];
- $formation=$_GET['formation'];
- $degrees=$_GET['degrees'];
+ $email=$_GET['email'];
+ $password=$_GET['password'];
  
- $sql = "INSERT into inscription (first_name,last_name, formation, degrees) VALUES ('$first_name','$last_name', '$formation', '$degrees')";   
+ $sql = "INSERT into user (nom, prenom, email, password) VALUES ('$first_name','$last_name', '$email', '$password')";   
  $req = $bdd->exec($sql);
       
 		if ($req!='') 
