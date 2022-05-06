@@ -16,9 +16,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.SenFacture2..AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+    <style name="Theme.SenFacture2..AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+
+    <style name="Theme.SenFacture2..PopupOverlay" parent="ThemeOverlay.AppCompat.Light"></style>
+
+    <style name="Theme.SenFacture2.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.SenFacture2..PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
-    </style>
+    <style name="Theme.SenFacture2.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SenFacture2.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
