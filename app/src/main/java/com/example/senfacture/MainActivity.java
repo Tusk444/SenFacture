@@ -151,27 +151,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private boolean CheckAllFields() {
-        if (txtIntitulé.length() == 0) {
-            txtIntitulé.setError("This field is required");
-            return false;
-        }
 
-        if (txtMontant.length() == 0) {
-            txtMontant.setError("This field is required");
-            return false;
-        }
-
-        if (txtNuméro.length() == 0) {
-            txtNuméro.setError("This field is required");
-            return false;
-        }
-
-        if (txtDate.length() == 0) {
-            txtDate.setError("This field is required");
-            return false;
-        }
-        // after all validation return true.
-        return true;
-    }
 }

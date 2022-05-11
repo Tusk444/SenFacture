@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/all"
-    tools:context=".MainActivity">
+    tools:context=".AjoutFactureFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="ajouter une facture"
+        android:text="@string/add_bills"
         android:textColor="@color/gray"
         android:textSize="@dimen/title"
         android:textStyle="bold|italic" />
@@ -29,27 +29,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
-        android:hint="intitulé" />
+        android:hint="@string/intitule" />
 
     <EditText
         android:id="@+id/txtMontant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
-        android:hint="montant" />
+        android:hint="@string/price" />
 
     <EditText
         android:id="@+id/txtNuméro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
-        android:hint="numéro" />
+        android:hint="Numéro" />
 
     <EditText
         android:id="@+id/txtDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="date"
+        android:hint="@string/deadline"
         android:inputType="date"
         tools:layout_marginTop="@dimen/top" />
 
@@ -86,11 +86,10 @@
 
         <Button
             android:id="@+id/cancelButton"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:text="CANCEL"
+            android:text="@string/cancel"
             />
 
         <Button
@@ -98,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="PROCEED"
+            android:text="@string/save"
             android:textColor="@android:color/white"
             tools:ignore="ButtonStyle" />
 
