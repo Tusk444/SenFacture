@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void authentification(){
-        String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/connexion.php?email="+email+"&password="+password;
+        String url = "http://"+ BuildConfig.IP_ADDRESS +"/senfacture/connexion.php?email="+email+"&password="+password;
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder().url(url).build();
