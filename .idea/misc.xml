@@ -15,7 +15,9 @@
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/drawable/ic_money.xml" value="0.1245" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/drawable/ic_money_off.xml" value="0.1245" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/drawable/side_nav_bar.xml" value="0.1245" />
+        <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/activity_ajout_facture.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/activity_home.xml" value="0.225" />
+        <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/activity_inscription.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/activity_main.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/activity_main2.xml" value="0.225" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/app_bar_home.xml" value="0.225" />
@@ -28,6 +30,8 @@
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_events.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_factureImpayé.xml" value="0.225" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_first.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_first2.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_first3.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_formation.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_gallery.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_gestion.xml" value="0.225" />
@@ -38,6 +42,8 @@
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_mark.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_payees.xml" value="0.225" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_second.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_second2.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_second3.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_slideshow.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_structures.xml" value="0.225" />
         <entry key="..\:/Users/LENOVO/SenFacture/app/src/main/res/layout/fragment_university.xml" value="0.22083333333333333" />
