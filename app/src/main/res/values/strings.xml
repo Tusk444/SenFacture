@@ -28,6 +28,11 @@
     <string name="error_parameters">Paramètres incorrectes</string>
     <string name="error_inscription">Inscription échouée</string>
     <string name="success_inscription">Inscription réussie</string>
+    <string name="add_bills">Ajouter une facture</string>
+    <string name="intitule">Intitulé</string>
+    <string name="price">Montant</string>
+    <string name="number">Numéro</string>
+    <string name="deadline">Date d\'écheance</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

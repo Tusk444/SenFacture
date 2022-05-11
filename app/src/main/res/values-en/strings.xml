@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">SenFacture</string>
-    <string name="connection">Connexion</string>
-    <string name="login">Identifiant</string>
+    <string name="welcome">Bienvenue, </string>
+    <string name="connection">Connectez-vous</string>
+    <string name="login">Email</string>
     <string name="password">Mot de passe</string>
-    <string name="connect">Se connecter</string>
-    <string name="sign_up">s\'inscrire</string>
+    <string name="connect">Connexion</string>
+    <string name="sign_up">Inscription</string>
+    <string name="sign_up2">S\'inscrire</string>
     <string name="not_signed_up">Vous n\'avez pas de compte ?</string>
     <string name="email">senfacture@overload.sn</string>
     <string name="paid_bills">Factures payées</string>
@@ -26,6 +28,11 @@
     <string name="error_parameters">Paramètres incorrectes</string>
     <string name="error_inscription">Inscription échouée</string>
     <string name="success_inscription">Inscription réussie</string>
+    <string name="add_bills">Ajouter une facture</string>
+    <string name="intitule">Intitulé</string>
+    <string name="price">Montant</string>
+    <string name="number">Numéro</string>
+    <string name="deadline">Date d\'écheance</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -37,7 +44,8 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_main2">MainActivity2</string>
-    <string name="senfacture">SenFacture est un système de gestion de factures. Il vous permettra d\'enregistrer, de modifier et de consulter les dites factures, qu\'elles soient impayées ou non</string>
+    <string name="senfacture">SenFacture est un système de gestion de factures. Il vous permettra d\'enregistrer, de modifier et de consulter les dites factures, qu\'elles soient impayées ou non. Si vous avez besoin d\'aide, utilisez la rubrique \"Aide\" de la barre de navigation.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_university_fragment">UniversityFragment</string>
+    <string name="successfully_signed_up">Inscription réussie ! Redirection en cours</string>
 </resources>
