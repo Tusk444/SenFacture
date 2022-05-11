@@ -17,11 +17,6 @@
         android:theme="@style/Theme.SenFacture2"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ajoutFacture"
-            android:exported="false"
-            android:label="@string/title_activity_ajout_facture"
-            android:theme="@style/Theme.SenFacture2.NoActionBar" />
-        <activity
             android:name=".InscriptionActivity"
             android:exported="false" />
         <activity
