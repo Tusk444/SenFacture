@@ -121,15 +121,29 @@ public class StructureFragment extends Fragment implements OnMapReadyCallback {
                 }
                 if(marker.getTitle().equals("Senelec")){
                     Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:338399476"));
-                    startActivity(intent);
+                    new android.os.Handler(Looper.getMainLooper()).postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    startActivity(intent);                                    }
+                            },
+                            3000);
                 }
                 if(marker.getTitle().equals("SDE")){
                     Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:338393737"));
-                    startActivity(intent);
-                }
+                    new android.os.Handler(Looper.getMainLooper()).postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    startActivity(intent);                                    }
+                            },
+                            3000);                }
                 if(marker.getTitle().equals("Canal +")){
                     Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:338895040"));
-                    startActivity(intent);
+                    new android.os.Handler(Looper.getMainLooper()).postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    startActivity(intent);                                    }
+                            },
+                            3000);
                 }
 
                 return false;

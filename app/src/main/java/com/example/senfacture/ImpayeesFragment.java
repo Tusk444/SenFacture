@@ -27,7 +27,7 @@ import okhttp3.Response;
 public class ImpayeesFragment extends Fragment {
     private Button btnBills;
     private TextView tvBills,tvEmail;
-    private int id;
+    private int id = 0;
     private String bills,email;
 
     // creating constant keys for shared preferences.
@@ -91,9 +91,6 @@ public class ImpayeesFragment extends Fragment {
                     if(!status.equals("0")){
                         id = Integer.parseInt(jo.getString("status"));
                     }
-                    else {
-                        id = 0;
-                    }
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -103,54 +100,60 @@ public class ImpayeesFragment extends Fragment {
 
     public void getBills(){
         getIdByEmail();
-        String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/bills.php?id="+id;
-        bills = "";
+        if (id==0) throw new IllegalArgumentException("L'utilisateur n'existe pas");
+        try {
+            String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/bills.php?id="+id;
+            bills = "";
 
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
+                    .url(url)
+                    .build();
 
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                String message = getString(R.string.error_connection);
-
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                try {
-                    String result = response.body().string();
-                    JSONObject jo = new JSONObject(result);
-                    JSONArray ja = jo.getJSONArray("bills");
-
-                    for (int i = 0; i < ja.length(); i++) {
-                        JSONObject element = ja.getJSONObject(i);
-                        String intitule = element.getString("intitule");
-                        String entreprise = element.getString("entreprise");
-                        String numero = element.getString("numero");
-                        String date_echeance = element.getString("date_echeance");
-                        bills+= intitule+": "+entreprise+numero+date_echeance+"\n\n";
-                    }
+            client.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    String message = getString(R.string.error_connection);
 
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            tvBills.setText(bills);
+                            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                         }
                     });
-
-                }catch (Exception e){
-                    e.printStackTrace();
                 }
-            }
-        });
+
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+                    try {
+                        String result = response.body().string();
+                        JSONObject jo = new JSONObject(result);
+                        JSONArray ja = jo.getJSONArray("bills");
+
+                        for (int i = 0; i < ja.length(); i++) {
+                            JSONObject element = ja.getJSONObject(i);
+                            String intitule = element.getString("intitule");
+                            String entreprise = element.getString("entreprise");
+                            String numero = element.getString("numero");
+                            String date_echeance = element.getString("date_echeance");
+                            bills+= intitule+": "+entreprise+numero+date_echeance+"\n\n";
+                        }
+
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                tvBills.setText(bills);
+                            }
+                        });
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            });
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+
     }
 }
