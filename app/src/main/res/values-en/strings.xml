@@ -48,4 +48,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_university_fragment">UniversityFragment</string>
     <string name="successfully_signed_up">Inscription réussie ! Redirection en cours</string>
+    <string name="no_bill_found">Aucune facture trouvée</string>
+    <string name="please_add">Veuillez ajouter une facture</string>
 </resources>

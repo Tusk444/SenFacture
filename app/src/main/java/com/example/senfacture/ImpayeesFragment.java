@@ -4,19 +4,32 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Looper;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.senfacture.models.Facture;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -25,10 +38,14 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class ImpayeesFragment extends Fragment {
-    private Button btnBills;
-    private TextView tvBills,tvEmail;
-    private int id = 0;
+    private int id;
     private String bills,email;
+    private Button btnBills;
+    private RecyclerView recyclerView;
+    private ArrayList<String> intitules = new ArrayList<>();
+    private ArrayList<String> entreprises = new ArrayList<>();
+    private ArrayList<String> numeros = new ArrayList<>();
+    private ArrayList<String> dates = new ArrayList<>();
 
     // creating constant keys for shared preferences.
     public static final String SHARED_PREFS = "shared_prefs";
@@ -39,29 +56,33 @@ public class ImpayeesFragment extends Fragment {
     // variable for shared preferences.
     SharedPreferences sharedpreferences;
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_impayees, container, false);
-
         sharedpreferences = this.getActivity().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-
-        // getting data from shared prefs and
-        // storing it in our string variable.
         email = sharedpreferences.getString(EMAIL_KEY, null);
         btnBills = view.findViewById(R.id.btnBills);
-        tvBills = view.findViewById(R.id.tvBills);
-
-
-
+        // get the reference of RecyclerView
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        // set a LinearLayoutManager with default vertical orientation
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(linearLayoutManager);
         btnBills.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getBills();
+                CustomAdapter customAdapter = new CustomAdapter(getContext(), intitules, entreprises, numeros,dates);
+                recyclerView.setAdapter(customAdapter);
+                customAdapter.notifyDataSetChanged();
+
             }
         });
+
         return view;
     }
+
 
     public void getIdByEmail(){
         String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/id.php?email="+email;
@@ -100,31 +121,31 @@ public class ImpayeesFragment extends Fragment {
 
     public void getBills(){
         getIdByEmail();
-        if (id==0) throw new IllegalArgumentException("L'utilisateur n'existe pas");
-        try {
-            String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/bills.php?id="+id;
-            bills = "";
+        String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/bills.php?id="+id;
+        bills = "";
 
-            OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder()
-                    .url(url)
-                    .build();
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
 
-            client.newCall(request).enqueue(new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
-                    String message = getString(R.string.error_connection);
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                String message = getString(R.string.error_connection);
 
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
 
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful())
+                {
                     try {
                         String result = response.body().string();
                         JSONObject jo = new JSONObject(result);
@@ -132,28 +153,22 @@ public class ImpayeesFragment extends Fragment {
 
                         for (int i = 0; i < ja.length(); i++) {
                             JSONObject element = ja.getJSONObject(i);
-                            String intitule = element.getString("intitule");
-                            String entreprise = element.getString("entreprise");
-                            String numero = element.getString("numero");
-                            String date_echeance = element.getString("date_echeance");
-                            bills+= intitule+": "+entreprise+numero+date_echeance+"\n\n";
-                        }
-
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                tvBills.setText(bills);
+                            if(Integer.parseInt(element.getString("is_paid"))==0)
+                            {
+                                intitules.add(element.getString("intitule"));
+                                entreprises.add(element.getString("entreprise"));
+                                numeros.add(element.getString("numero"));
+                                dates.add(element.getString("date_echeance"));
                             }
-                        });
+                        }
 
                     }catch (Exception e){
                         e.printStackTrace();
                     }
                 }
-            });
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        }
+
+            }
+        });
 
     }
 }

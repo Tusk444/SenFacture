@@ -21,6 +21,9 @@ public class Facture {
         this.idUser = idUser;
     }
 
+    public Facture() {
+    }
+
     public int getIdFacture() {
         return idFacture;
     }
