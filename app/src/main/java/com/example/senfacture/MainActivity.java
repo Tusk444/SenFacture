@@ -51,11 +51,6 @@ public class MainActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPassword);
         btnConnect = findViewById(R.id.btnConnect);
         btnSignUp = findViewById(R.id.btnSignUp);
-        btnSave = findViewById(R.id.btnSave);
-        txtIntitulé = findViewById(R.id.txtIntitulé);
-        txtMontant = findViewById(R.id.txtMontant);
-        txtNuméro = findViewById(R.id.txtNuméro);
-        txtDate = findViewById(R.id.txtDate);
 
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 

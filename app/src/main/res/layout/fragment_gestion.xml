@@ -5,10 +5,23 @@
     android:layout_height="match_parent"
     tools:context=".GestionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_marginHorizontal="@dimen/left"
+        android:layout_marginTop="100dp"
+        android:textColorHint="@color/white"
+        android:hint="@string/add_bills"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_marginHorizontal="@dimen/left"
+
+        android:layout_marginTop="400dp"
+        android:textColorHint="@color/white"
+        android:hint="@string/edit_bills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>

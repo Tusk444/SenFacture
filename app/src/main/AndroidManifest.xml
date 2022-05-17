@@ -17,6 +17,9 @@
         android:theme="@style/Theme.SenFacture2"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".AddBillActivity"
+            android:exported="false" />
+        <activity
             android:name=".InscriptionActivity"
             android:exported="false" />
         <activity
@@ -36,7 +39,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-
 
         <activity
             android:name=".MainActivity"

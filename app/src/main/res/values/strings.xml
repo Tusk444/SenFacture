@@ -24,6 +24,7 @@
     <string name="save">Enregistrer</string>
     <string name="cancel">Annuler</string>
     <string name="error_field">Veuillez remplir les champs</string>
+    <string name="error_mail">Email incorrect</string>
     <string name="error_connection">Veuillez vérifier votre connexion</string>
     <string name="error_parameters">Paramètres incorrectes</string>
     <string name="error_inscription">Inscription échouée</string>
@@ -48,6 +49,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_university_fragment">UniversityFragment</string>
     <string name="successfully_signed_up">Inscription réussie ! Redirection en cours</string>
+    <string name="successfully_added_bill">Facture ajoutée ! Redirection en cours</string>
     <string name="no_bill_found">Aucune facture trouvée</string>
     <string name="please_add">Veuillez ajouter une facture</string>
+    <string name="edit_bills">Modifier une facture</string>
+    <string name="help_text">Bienvenue dans la rubrique d\'aide. L\'application est en cours de développement donc certains bugs peuvent apparaître. Pour ajouter une facture, rendez vous dans la page \"Gérer les factures\" où vous pourrez ajouter, modifier ou supprimer les factures. Ces derniers seront consultables dans les pages "\Factures payées"\ et "\Factures impayées"\ selon leur état de paiement</string>
+
 </resources>

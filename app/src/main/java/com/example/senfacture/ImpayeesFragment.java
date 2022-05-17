@@ -72,6 +72,7 @@ public class ImpayeesFragment extends Fragment {
         btnBills.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                getIdByEmail();
                 getBills();
                 CustomAdapter customAdapter = new CustomAdapter(getContext(), intitules, entreprises, numeros,dates);
                 recyclerView.setAdapter(customAdapter);
@@ -120,7 +121,6 @@ public class ImpayeesFragment extends Fragment {
     }
 
     public void getBills(){
-        getIdByEmail();
         String url = "http://"+BuildConfig.IP_ADDRESS+"/senfacture/bills.php?id="+id;
         bills = "";
 

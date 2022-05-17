@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -59,6 +61,10 @@ public class InscriptionActivity extends AppCompatActivity {
                     String message = getString(R.string.error_field);
                     Toast.makeText(InscriptionActivity.this, message, Toast.LENGTH_SHORT).show();
                 }
+                else if (! Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    String message = getString(R.string.error_mail);
+                    Toast.makeText(InscriptionActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
                 else {
                     inscription();
                 }
@@ -92,7 +98,7 @@ public class InscriptionActivity extends AppCompatActivity {
                     String status = jo.getString("status");
 
                     if(status.equals("KO")){
-                        final String message = getString(R.string.error_parameters);
+                        final String message =  getString(R.string.error_parameters);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

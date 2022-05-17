@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="@dimen/all"
-    tools:context=".AjoutFactureFragment">
+    tools:context=".AddBillActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top"
-        android:hint="Numéro" />
+        android:hint="@string/number" />
 
     <EditText
         android:id="@+id/txtDate"
@@ -51,31 +51,21 @@
         android:layout_height="wrap_content"
         android:hint="@string/deadline"
         android:inputType="date"
-        tools:layout_marginTop="@dimen/top" />
+        android:layout_marginTop="@dimen/top" />
 
-    <!-- <RadioButton
-        android:id="@+id/txtEntreprise"
-        android:layout_width="142dp"
-        android:layout_height="wrap_content"
-        android:text="senelec" />
 
-    <RadioButton
-        android:id="@+id/txtEntreprise"
-        android:layout_width="142dp"
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:text="Entreprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="orange" />
-
-    <RadioButton
-        android:id="@+id/txtEntreprise"
-        android:layout_width="142dp"
-        android:layout_height="wrap_content"
-        android:text="seneau" />
-
-    <RadioButton
-        android:id="@+id/txtEntreprise"
-        android:layout_width="142dp"
-        android:layout_height="wrap_content"
-        android:text="canal +" />!-->
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,7 +75,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/cancelButton"
+            android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
@@ -93,7 +83,7 @@
             />
 
         <Button
-            android:id="@+id/btnSave"
+            android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
