@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SenFacture2"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".AddBillActivity"
             android:exported="false" />
